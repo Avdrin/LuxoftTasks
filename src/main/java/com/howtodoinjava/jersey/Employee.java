@@ -1,13 +1,10 @@
 package com.howtodoinjava.jersey;
 
-/**
- * Created by Katz on 05.04.2017.
- */
+
 public class Employee {
     private String name;
     private String second;
     private String third;
-//    private int salary;
 
     public Employee(String n, String s, String t) {
         this.name = n;

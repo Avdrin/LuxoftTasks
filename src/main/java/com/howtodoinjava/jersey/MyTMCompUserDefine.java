@@ -18,7 +18,7 @@ public class MyTMCompUserDefine {
 
     public static void main(String a[]) {
 
-        List<Employee> lField = getEmplListFromZip(getAbsolutePath("exampl.zip"));//"C:/11/exampl.zip");
+        List<Employee> lField = getEmplListFromZip(getAbsolutePath("exampl.zip"));
 
         printToLogFile(lField);
 
@@ -58,7 +58,7 @@ public class MyTMCompUserDefine {
 
 
     public static TreeMap<Empl, List<Emp>> transformEmplListToTreeMap(List<Employee> lField) {
-        TreeMap<Empl, List<Emp>> tm = new TreeMap<Empl, List<Emp>>(new MyNameComp());
+        TreeMap<Empl, List<Emp>> tm = new TreeMap<Empl, List<Emp>>(new TreeComparator());
         List<Emp> ls = new ArrayList<Emp>();
         for (Employee em : lField) {
             ls.add(new Emp(em.getThird()));

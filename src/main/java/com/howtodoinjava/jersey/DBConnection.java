@@ -28,7 +28,6 @@ public class DBConnection {
     }
 
     protected Connection getConnection() {
-//        url = "jdbc:hsqldb:hsql:/localhost/test"; //"jdbc:hsqldb://localhost:3306/serv";
         login = "root";
         password = "";
 
@@ -36,14 +35,13 @@ public class DBConnection {
             String path = "mypath/";
             String dbname = "mydb";
             String connectionString = "jdbc:hsqldb:file:"+path+dbname;
-//
             connection = DriverManager.getConnection(connectionString, login, password);
             System.out.println("Соединение установлено");
 
         } catch (SQLException e) {
             System.out.println("Соединение не создано");
             e.printStackTrace();
-            return null; //false;
+            return null;
         }
         return connection; //true;
     }
@@ -60,18 +58,4 @@ public class DBConnection {
             e.printStackTrace();
         }
     }
-
-
-//      public BasicDataSource dataSource() {
-//      BasicDataSource ds = new BasicDataSource();
-// 	    ds.setDriverClassName("org.postgresql.Driver");
-// 		ds.setUrl("jdbc:postgresql://192.168.60.102:5432/nikasappdb");
-// 		ds.setUsername("commonuser");
-// 		ds.setPassword("password");
-//      ds.setDriverClassName("org.hsqldb.jdbcDriver");
-//      ds.setUrl("jdbc:hsqldb:hsql:/localhost/test");
-//      ds.setUsername("sa");
-//      ds.setPassword("");
-//      return ds; 	}
-
 }
