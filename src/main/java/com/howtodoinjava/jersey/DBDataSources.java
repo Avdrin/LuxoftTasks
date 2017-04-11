@@ -64,7 +64,8 @@ public class DBDataSources {
                 LOGGER.info("From db: " + resultSet.getInt(1) + " "
                         + resultSet.getString(2) + " "
                         + resultSet.getString(3) + " "
-                        + resultSet.getString(4));}
+                        + resultSet.getString(4));
+            }
         } catch (SQLException e) {
             LOGGER.error(e);
         }

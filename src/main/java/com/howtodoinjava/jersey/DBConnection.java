@@ -14,7 +14,6 @@ public class DBConnection {
     String password;
 
 
-
     protected boolean loadDriver() {
         try {
             Class.forName("org.hsqldb.jdbcDriver");
@@ -34,7 +33,7 @@ public class DBConnection {
         try {
             String path = "mypath/";
             String dbname = "mydb";
-            String connectionString = "jdbc:hsqldb:file:"+path+dbname;
+            String connectionString = "jdbc:hsqldb:file:" + path + dbname;
             connection = DriverManager.getConnection(connectionString, login, password);
             System.out.println("Соединение установлено");
 
