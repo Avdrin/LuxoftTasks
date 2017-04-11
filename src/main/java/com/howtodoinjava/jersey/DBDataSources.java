@@ -14,7 +14,7 @@ import java.util.TreeMap;
 public class DBDataSources {
 
     DBConnection dbConnection = new DBConnection();
-    private static final Logger LOGGER = LogManager.getLogger(MyTMCompUserDefine.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(TaskTest.class.getName());
 
 
     protected void dropTable() {

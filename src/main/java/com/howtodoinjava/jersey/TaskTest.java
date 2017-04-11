@@ -13,8 +13,8 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 
-public class MyTMCompUserDefine {
-    private static final Logger LOGGER = LogManager.getLogger(MyTMCompUserDefine.class.getName());
+public class TaskTest {
+    private static final Logger LOGGER = LogManager.getLogger(TaskTest.class.getName());
 
     public static void main(String a[]) {
 
@@ -33,7 +33,7 @@ public class MyTMCompUserDefine {
     }
 
     private static String getAbsolutePath(String fileName) {
-        ClassLoader classLoader = new MyTMCompUserDefine().getClass().getClassLoader();
+        ClassLoader classLoader = new TaskTest().getClass().getClassLoader();
         File configFile = new File(classLoader.getResource(fileName).getFile());
         return configFile.getAbsolutePath();
     }
